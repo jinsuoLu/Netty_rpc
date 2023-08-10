@@ -14,7 +14,7 @@
         <module>selfrpc-framework/selfrpc-common</module>
         <module>selfrpc-framework/selfrpc-core</module>
         <module>selfrpc-manager</module>
-        <module>selfrpc-demo/selfrpc-client-demo</module>
+        <module>selfrpc-demo/selfrpc-consumer-demo</module>
         <module>selfrpc-demo/selfrpc-provider-demo</module>
         <module>selfrpc-demo/selfrpc-api</module>
     </modules>
