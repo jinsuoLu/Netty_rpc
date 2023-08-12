@@ -1,7 +1,7 @@
 package com.selfdemo;
 
 import com.selfdemo.utils.ZookeeperNode;
-import com.selfdemo.utils.ZookeeperUtil;
+import com.selfdemo.utils.ZookeeperUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooKeeper;
@@ -18,7 +18,7 @@ public class Application {
 
     public static void main(String[] args) {
         //创建一个zookeeper实例
-        ZooKeeper zookeeper = ZookeeperUtil.createZookeeper();
+        ZooKeeper zookeeper = ZookeeperUtils.createZookeeper();
 
         String basePath = "/selfRpc-metadata";
         String providerPath = basePath+"/providers";
@@ -28,9 +28,9 @@ public class Application {
         ZookeeperNode providerNode = new ZookeeperNode(providerPath,null);
         ZookeeperNode consumerNode = new ZookeeperNode(consumerPath,null);
 
-        List.of(baseNode,providerNode,consumerNode).forEach(node -> ZookeeperUtil.createNode(zookeeper,node,null,CreateMode.PERSISTENT));
+        List.of(baseNode,providerNode,consumerNode).forEach(node -> ZookeeperUtils.createNode(zookeeper,node,null,CreateMode.PERSISTENT));
 
-        ZookeeperUtil.close(zookeeper);
+        ZookeeperUtils.close(zookeeper);
 
     }
 

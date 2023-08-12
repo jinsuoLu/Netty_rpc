@@ -13,4 +13,8 @@ public class Constant {
 
     // zookeeper 的默认超时时间
     public static final int TIME_OUT = 10000;
+
+    //服务提供方和调用方 在注册中心的基础路径
+    public static final String BASE_PROVIDES_PATH = "/selfRpc-metadata/providers";
+    public static final String BASE_CONSUMERS_PATH = "/selfRpc-metadata/consumers";
 }

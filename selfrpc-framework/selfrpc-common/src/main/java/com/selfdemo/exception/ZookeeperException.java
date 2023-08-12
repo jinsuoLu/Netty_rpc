@@ -7,4 +7,14 @@ package com.selfdemo.exception;
  */
 
 public class ZookeeperException extends RuntimeException {
+    public ZookeeperException(Throwable cause) {
+        super(cause);
+    }
+
+    public ZookeeperException(String message) {
+        super(message);
+    }
+
+    public ZookeeperException() {
+    }
 }
